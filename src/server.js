@@ -7,6 +7,7 @@ const csrf = require('csurf');
 const cookieParser = require('cookie-parser');
 const path = require('path');
 const session = require('express-session');
+const cors = require('cors');
 
 // Importación de Rutas
 const ProductosRoute = require('../routes/productosRoute');
@@ -21,6 +22,11 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
+const corsOptions = {
+    origin: 'https://your-netlify-site.netlify.app',
+    optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
