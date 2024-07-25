@@ -5,8 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/server.js",
-    "build": "cp -R src/* public/"  
-  },
+    "build": "mkdir -p public && cp -R src/public/* public/"
+    },
   "keywords": [],
   "author": "",
   "license": "ISC",
