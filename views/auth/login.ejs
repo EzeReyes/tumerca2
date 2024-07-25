@@ -29,7 +29,7 @@
     <main class="mainLogin">
             <h3 class="mainLogin-titulo">Bienvenido, ingrese su usuario</h3>
             <div class="formulariosLogin">
-                <form class="inicie" method="POST" action="/auth/login">
+                <form class="inicie" method="POST" action="/auth/login/?_csrf=<%= csrfToken %>">
                     <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
                     <input type="text" class="email" name="Email" placeholder="Ingrese su email">
                     <input type="password" name="Password" placeholder="Ingrese su password">

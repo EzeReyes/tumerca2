@@ -21,7 +21,6 @@ const loginGet = async (req, res) => {
 
 
 const login = (req, res) => {
-    const csrfToken = req.csrfToken();
 
     // Validación
     const errors = validationResult(req);
